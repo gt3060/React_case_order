@@ -1,24 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import './css/App.css';
+import Home from './component/Home';
+import Pcontent from './component/Pcontent';
+
+
+// 请求api接口：
+
+//   列表：http://a.itying.com/api/productlist
+
+//   详情：http://a.itying.com/api/productcontent?id=5acla22011f48140d0002955
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Home></Home>
+      <Pcontent></Pcontent> */}
+
+      <Router>
+        <div>
+          {/* <ul>
+            <li>
+              <Link to="/">首页组件</Link>
+            </li>
+            <li>
+              <Link to="/pcontent">详情页组件</Link>
+            </li>
+          </ul> */}
+
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/pcontent/:id" component={Pcontent}></Route>
+        </div>
+
+
+
+      </Router>
     </div>
   );
 }
