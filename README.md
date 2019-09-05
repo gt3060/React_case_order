@@ -1,5 +1,81 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Document Introdution
+
+### Document Catalog
+
+component 文件夹中为组件；css文件夹为样式表；images文件夹放图片；
+
+在本案例中的所有图片均为网上图片，故不需本图片；
+
+Home.js和Pconent.js分别表示首页菜单和菜品详情页的内容；
+
+### Case Outline
+
+实现的具体方法为：
+ 
+    页面携值跳转，采用React Router ；
+
+    图片、具体内容，采用axios方式进行网上请求数据；
+
+    React解析HMTL，采用dangerouslySetHtml方法；
+
+    css并没有过多的摄入，可以在今后闲暇之时继续开发；
+
+    实现用js实现路由：利用<Redirect>，具体见：Login.js;
+
+    实现嵌套路由；
+
+### Route Module
+
+1、新建一个model.js
+
+2、导入所需要的组件
+
+3、声明变量 let routes=[
+
+    {
+        path:***,
+
+        component:***,
+
+        exact:true
+    },
+    {
+        path:***,
+
+        component:***,
+
+        exact:true
+    }.
+    .....
+
+]
+
+    嵌套路由：
+
+    let routes=[
+
+    {
+        path:***,
+
+        component:***,
+
+        children:[
+            {
+                path:***,
+                component:**
+            },
+            ....
+        ]
+    },
+    .....
+
+]
+
+4、export default routes
+
+
 ## Available Scripts
 
 In the project directory, you can run:

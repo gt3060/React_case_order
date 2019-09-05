@@ -37,6 +37,9 @@ class Home extends Component {
         return (
             <div className="Home">
                 首页组件
+                <button>
+                    <Link to="/login">跳转到登录页面</Link>
+                </button>
                 <div className="list">
                     {
                         this.state.list.map((value, key) => {
